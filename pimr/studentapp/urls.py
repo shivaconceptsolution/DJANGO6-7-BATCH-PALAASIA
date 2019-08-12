@@ -7,5 +7,7 @@ urlpatterns = [
     path('home', views.index, name='index'),
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
-    path('calcsi', views.si, name='si')
+    path('calcsi', views.si, name='si'),
+    path('add', views.add, name='add'),
+    path('addlogic', views.addlogic, name='addlogic')
 ]

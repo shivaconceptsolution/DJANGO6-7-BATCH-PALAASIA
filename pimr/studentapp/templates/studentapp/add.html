@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="addlogic" method="post">
+	{% csrf_token %}
+<input type="number" name="txtnum1" placeholder="Enter First Number" />
+<br>
+<br>
+<input type="number" name="txtnum2" placeholder="Enter Second Number" />
+<br>
+<br>
+<input type="submit" name="btnsubmit" value="ADD" />
+<input type="submit" name="btnsubmit" value="SUB" />
+<input type="submit" name="btnsubmit" value="MULTI" />
+<input type="submit" name="btnsubmit" value="DIVISION" />
+<br>
+<br>
+
+</form>
+<input type="text" value="{{key}}" readonly="true" /> 
+</body>
+</html>
