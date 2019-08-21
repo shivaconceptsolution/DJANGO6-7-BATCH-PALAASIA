@@ -1,0 +1,70 @@
+How we create form element in Django and Get and Set value:-
+
+1 Create  Load Method in Views.py 
+
+2 Create Html Design of Form under Templates folder
+
+3 Create Action Method Views.py
+
+4 Write Code on Action Method
+
+
+5 Define Load Url and Action Url under app urls.py file
+
+.....................................................................................................................
+
+Database Connectivity operation in Django:-
+....................................................................................................................................
+
+Django Provide SQLITE Database By Default to Store Data.
+
+DJANGO PROVIDE models.py file to create Model Class which will be created table dynamically . it support nosql concept.
+
+
+1 Create Class Under Models.py and Define Data member according to table column
+
+2  run migration command to migrate app changes into application
+
+   python manage.py makemigrations appname
+
+
+
+3 run Sqlmigration to migrate generated script to database
+
+   python manage.py sqlmigrate appname 0001
+
+
+4  migrate application
+    python manage.py migrate
+
+
+5 Go into admin.py and add table
+
+
+6 create userid and password for admin
+
+python manage.py createsuperuser
+
+7  open admin app
+
+localhost:8000/admin
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
