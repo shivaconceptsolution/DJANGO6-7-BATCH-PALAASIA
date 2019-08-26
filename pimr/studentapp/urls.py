@@ -14,5 +14,7 @@ urlpatterns = [
     path('viewstudent', views.viewstudent, name='viewstudent'),
     path('editstu', views.editstu, name='editstu'),
     path('deletestu', views.deletestu, name='deletestu'),
-    path('updatestu', views.updatestu, name='updatestu')
+    path('updatestu', views.updatestu, name='updatestu'),
+    path('login', views.login, name='login'),
+    path('loginlogic', views.loginlogic, name='loginlogic')
 ]

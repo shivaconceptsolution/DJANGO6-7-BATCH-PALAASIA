@@ -1,13 +1,24 @@
 from django.shortcuts import redirect,render
 from django.http import HttpResponse
-from .models import Student
+from .models import Student,Reg
 
 def index(request):
     return render(request,"studentapp/index.html")
 def reg(request):
 	s = Student(rno=request.GET['txtrno'],sname=request.GET['txtname'],branch=request.GET['txtbranch'],fees=request.GET['txtfees'])
 	s.save()
-	return render(request,"studentapp/index.html")    
+	return render(request,"studentapp/index.html") 
+def login(request):
+    return render(request,"studentapp/login.html")   
+def loginlogic(request):
+	e = request.POST["txtemail"]
+	pa = request.POST["txtpass"]
+	s = Reg.objects.filter(email=e,passsword=pa)
+	if(s.count()==1):
+	 return redirect('viewstudent')
+	else: 
+	 return render(request,"studentapp/login.html",{"key":"invalid userid password"})
+
 def about(request):
     return render(request,"studentapp/about.html")
 def contact(request):
